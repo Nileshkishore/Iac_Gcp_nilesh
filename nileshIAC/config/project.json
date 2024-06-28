@@ -6,7 +6,7 @@
     "vpc_name": "iacvpcnilesh",
     "subnet_name": "iac-vpc-nilesh-subnet",
     "subnet_cidr_range":"10.2.0.0/16",
-    "bucket_name": "nnilesh_bucket",
+    "bucket_name": "nnilesh_bucket_3",
     "vendor_topic": "nnilesh_pudsub_for_bucket",
     "enable_digital_banking": "true",
     "bigQuery_dataset_id": "db_csv_nk",
