@@ -3,7 +3,7 @@
     "region": "asia-south1",
     "roles" : "roles/editor",
     "service_account_email": "june-service-account-oidc@nileshfirst.iam.gserviceaccount.com",
-    "vpc_name": "iac_vpc_nilesh",
+    "vpc_name": "iacvpcnilesh",
     "subnet_name": "iac_vpc_Nilesh-subnet",
     "subnet_cidr_range":"10.2.0.0/16",
     "bucket_name": "nilesh_bucket",
