@@ -42,7 +42,7 @@ jobs:
       #   run: |
       #     cd terraform/modules/vendor/cloudFunction
       #     zip -r function.zip main.py requirements.txt
-
+# 
       - name: Initialize Terraform
         run: |
           cd terraform
