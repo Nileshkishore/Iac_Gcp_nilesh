@@ -40,7 +40,7 @@ jobs:
 
       - name: Zip Cloud Function code
         run: |
-          cd terraform/modules/vendor/cloudFunction
+          cd nileshIAC/modules/vendor/cloudFunction
           zip -r function.zip main.py requirements.txt
 
       - name: Initialize Terraform
