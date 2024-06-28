@@ -51,12 +51,12 @@ jobs:
       - name: Plan Terraform
         run: |
           cd nileshIAC
-          terraform plan -var-file="config/project-config.json"
+          terraform plan -var-file="config/project.json"
 
       - name: Apply Terraform
         run: |
           cd nileshIAC
-          terraform apply -var-file="config/project-config.json" -auto-approve
+          terraform apply -var-file="config/project.json" -auto-approve
 
   destroy:
     name: Destroy Infrastructure
@@ -87,9 +87,9 @@ jobs:
       - name: Plan Terraform
         run: |
           cd nileshIAC
-          terraform plan -var-file="config/project-config.json"
+          terraform plan -var-file="config/project.json"
 
       - name: Destroy Terraform
         run: |
           cd nileshIAC
-          terraform destroy -var-file="config/project-config.json" -auto-approve
+          terraform destroy -var-file="config/project.json" -auto-approve
