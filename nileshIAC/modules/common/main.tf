@@ -5,15 +5,15 @@
 #   members = ["serviceAccount:${var.service_account_email}"]
 # }
 
-resource "google_project_iam_binding" "iac-project" {
-  project = "nileshfirst"
-  role    = "roles/editor"
+# resource "google_project_iam_binding" "iac-project" {
+#   project = "nileshfirst"
+#   role    = "roles/editor"
 
-  members = [
-    "user:nileshkishore2020@gmail.com",
-    # Add more members if needed
-  ]
-}
+#   members = [
+#     "user:nileshkishore2020@gmail.com",
+#     # Add more members if needed
+#   ]
+# }
 
 
 resource "google_compute_network" "vpc_network" {
