@@ -15,7 +15,7 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "bucket" {
-  name     = "backend_bucket"
+  name     = "backend_bucket-nilesh-nk"
   location = "asia-south1"
   force_destroy = true
 }
