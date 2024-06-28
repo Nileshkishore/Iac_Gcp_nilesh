@@ -14,7 +14,7 @@ terraform {
   }
 }
 locals {
-  config = jsondecode(file("${path.module}/configs/project.json"))
+  config = jsondecode(file("${path.module}/config/project.json"))
 }
 
 provider "google" {
