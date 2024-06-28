@@ -1,8 +1,18 @@
-  resource "google_project_iam_binding" "iac-project" {
-  project = var.project_id
-  role    = var.roles
+#   resource "google_project_iam_binding" "iac-project" {
+#   project = var.project_id
+#   role    = var.roles
   
-  members = ["serviceAccount:${var.service_account_email}"]
+#   members = ["serviceAccount:${var.service_account_email}"]
+# }
+
+resource "google_project_iam_binding" "iac-project" {
+  project = "nileshfirst"
+  role    = "roles/editor"
+
+  members = [
+    "user:nileshkishore2020@gmail.com",
+    # Add more members if needed
+  ]
 }
 
 
