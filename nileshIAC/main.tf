@@ -5,15 +5,22 @@ terraform {
  }
 }
 
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+      version = "5.30.0"
+    }
+  }
+}
 locals {
-  confg = jsondecode(file("${path.module}/config/project.json"))
+  config = jsondecode(file("${path.module}/configs/project.json"))
 }
 
 provider "google" {
-  project = local.confg.project_id
-  region  = local.confg.region
+  project = local.config.project_id
+  region  = local.config.region
 }
-
 
 module "common" {
   source = "./modules/common"
