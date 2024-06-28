@@ -51,9 +51,9 @@ jobs:
       - name: Plan Terraform
         run: |
           cd terraform
-          terraform plan -var-file="configs/project-config.json"
+          terraform plan 
 
       - name: Apply Terraform
         run: |
           cd terraform
-          terraform apply -var-file="configs/project-config.json" -auto-approve
+          terraform apply -auto-approve
