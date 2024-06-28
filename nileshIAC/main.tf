@@ -16,7 +16,7 @@ provider "google" {
 
 
 module "commons" {
-  source = "./modules/commons"
+  source = "./modules/common"
   project_id = local.config.project_id
   service_account_email = local.config.service_account_email
   roles =      local.config.roles
