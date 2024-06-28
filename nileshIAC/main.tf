@@ -1,9 +1,9 @@
-# terraform {
-#  backend "gcs" {
-#    bucket  = "backend_bucket-nilesh-nkj"
-#    prefix  = "terraform/state"
-#  }
-# }
+terraform {
+ backend "gcs" {
+   bucket  = "backend_bucket-nilesh-nkj"
+   prefix  = "terraform/state"
+ }
+}
 
 terraform {
   required_providers {
