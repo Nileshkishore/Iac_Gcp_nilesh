@@ -12,15 +12,25 @@ resource "google_pubsub_topic" "vendor_topic" {
 
 #
 # Google Storage Notification
+# resource "google_storage_notification" "notification" {
+#   bucket         = google_storage_bucket.bucket.name
+#   payload_format = "JSON_API_V1"
+#   topic          = google_pubsub_topic.vendor_topic.name
+#   event_types    = ["OBJECT_FINALIZE", "OBJECT_METADATA_UPDATE"]
+#   custom_attributes = {
+#     new-attribute = "new-attribute-value"
+#   }
+# }
 resource "google_storage_notification" "notification" {
-  bucket         = google_storage_bucket.bucket.name
-  payload_format = "JSON_API_V1"
-  topic          = google_pubsub_topic.vendor_topic.name
-  event_types    = ["OBJECT_FINALIZE", "OBJECT_METADATA_UPDATE"]
+  bucket           = google_storage_bucket.bucket.name
+  payload_format   = "JSON_API_V1"
+  topic            = "projects/nileshfirst/topics/nnilesh_pudsub_for_bucket"
+  event_types      = ["OBJECT_FINALIZE", "OBJECT_METADATA_UPDATE"]
   custom_attributes = {
     new-attribute = "new-attribute-value"
   }
 }
+
 
 resource "google_bigquery_dataset" "dataset" {
     dataset_id                  = var.bigQuery_dataset_id
