@@ -1,0 +1,18 @@
+{
+    "project_id": "nileshfirst",
+    "region": "asia-south1",
+    "roles" : "roles/editor",
+    "service_account_email":"june-service-account-oidc@nileshfirst.iam.gserviceaccount.com",
+    "vpc_name": "iac_vpc_Nilesh",
+    "subnet_name": "iac_vpc_Nilesh-subnet",
+    "subnet_cidr_range":"10.2.0.0/16",
+    "bucket_name": "nilesh_bucket",
+    "vendor_topic": "nilesh_pudsub_for_bucket",
+    "enable_digital_banking": "true",
+    "bigQuery_dataset_id": "db_csv_nk",
+    "bigQuery_location": "US",
+    "bigQuery_table_id": "table_csv_nk",
+    "functionName": "bucket_function_pubsub_nk",
+    "function_entry_point": "hello_gcs",
+    "function_source_file_name":"function_cloud.zip"
+  }
