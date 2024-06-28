@@ -1,9 +1,9 @@
-terraform {
- backend "gcs" {
-   bucket  = "backend_bucket"
-   prefix  = "terraform/state"
- }
-}
+# terraform {
+#  backend "gcs" {
+#    bucket  = "backend_bucket"
+#    prefix  = "terraform/state"
+#  }
+# }
 
 locals {
   confg = jsondecode(file("${path.module}/config/project.json"))
@@ -14,8 +14,8 @@ provider "google" {
   region  = local.confg.region
 }
 
-# resource "google_storage_bucket" "bucket" {
-#   name     = "backend_bucket"
-#   location = "asia-south1"
-#   force_destroy = true
-# }
+resource "google_storage_bucket" "bucket" {
+  name     = "backend_bucket"
+  location = "asia-south1"
+  force_destroy = true
+}

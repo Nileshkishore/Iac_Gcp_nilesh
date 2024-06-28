@@ -45,17 +45,17 @@ jobs:
 
       - name: Initialize Terraform
         run: |
-          cd terraform
+          cd nileshIAC
           terraform init
 
       - name: Plan Terraform
         run: |
-          cd terraform
+          cd nileshIAC
           terraform plan -var-file="config/project-config.json"
 
       - name: Apply Terraform
         run: |
-          cd terraform
+          cd nileshIAC
           terraform apply -var-file="config/project-config.json" -auto-approve
 
   destroy:
@@ -82,14 +82,14 @@ jobs:
 
       - name: Initialize Terraform
         run: |
-          cd terraform
+          cd nileshIAC
           terraform init
       - name: Plan Terraform
         run: |
-          cd terraform
+          cd nileshIAC
           terraform plan -var-file="config/project-config.json"
 
       - name: Destroy Terraform
         run: |
-          cd terraform
+          cd nileshIAC
           terraform destroy -var-file="config/project-config.json" -auto-approve
