@@ -9,6 +9,7 @@ resource "google_pubsub_topic" "vendor_topic" {
   name = var.vendor_topic_name
 }
 
+
 #
 # Google Storage Notification
 resource "google_storage_notification" "notification" {
