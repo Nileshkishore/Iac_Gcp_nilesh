@@ -2,7 +2,7 @@
   project = var.project_id
   role    = var.roles
   
-  members = [var.service_account_email]
+  members = ["serviceAccount:${var.service_account_email}"]
 }
 
 
