@@ -38,10 +38,10 @@ jobs:
           workload_identity_provider: projects/1075213033479/locations/global/workloadIdentityPools/iac-nilesh-pool/providers/iac-nilesh-pro-id-2
           service_account: june-service-account-oidc@nileshfirst.iam.gserviceaccount.com
 
-      # - name: Zip Cloud Function code
-      #   run: |
-      #     cd terraform/modules/vendor/cloudFunction
-      #     zip -r function.zip main.py requirements.txt
+      - name: Zip Cloud Function code
+        run: |
+          cd terraform/modules/vendor/cloudFunction
+          zip -r function.zip main.py requirements.txt
 
       - name: Initialize Terraform
         run: |
