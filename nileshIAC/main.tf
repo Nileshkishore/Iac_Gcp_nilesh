@@ -15,7 +15,7 @@ provider "google" {
 }
 
 
-module "commons" {
+module "common" {
   source = "./modules/common"
   project_id = local.config.project_id
   service_account_email = local.config.service_account_email
@@ -25,7 +25,7 @@ module "commons" {
   subnet_name = local.config.subnet_name
   subnet_cidr_range = local.config.subnet_cidr_range
 }
-module "vedor"{
+module "vendor"{
   source = "./modules/vendor"
   bucket_name = local.config.bucket_name
   region = local.config.region
